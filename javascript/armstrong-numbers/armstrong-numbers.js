@@ -3,6 +3,20 @@
 // convenience to get you started writing code faster.
 //
 
-export const validate = () => {
-  throw new Error("Remove this statement and implement this function");
+export const validate = input => {
+  const strNum = input.toString();
+
+  let newNum = 0;
+  for (let i = 0; i < strNum.length; i++) {
+    const digit = strNum[i];
+
+    newNum = newNum + parseInt(digit) ** strNum.length;
+  }
+  console.log(newNum);
+
+  if (input === newNum) {
+    return true;
+  } else {
+    return false;
+  }
 };
