@@ -1,9 +1,4 @@
-//
-// This is only a SKELETON file for the 'Run Length Encoding' exercise. It's been provided as a
-// convenience to get you started writing code faster.
-//
-
-export const encode = input => {
+const encode = input => {
   let encodedOutput = "";
   let previousChar = "";
   let count = 0;
@@ -36,8 +31,9 @@ export const encode = input => {
   encodedOutput += previousChar;
   return encodedOutput;
 };
+// console.log(encode("AABBBCCCC"));
 
-export const decode = deCode => {
+const decode = deCode => {
   if (decode === "") {
     return "";
   }
@@ -58,3 +54,5 @@ export const decode = deCode => {
 
   return output;
 };
+
+console.log(decode("2A3B4C"));
